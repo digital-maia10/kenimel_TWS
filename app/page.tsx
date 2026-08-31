@@ -2,24 +2,6 @@
 
 import { useEffect } from "react";
 
-const programs = [
-  { icon: "◒", title: "Fat Loss", text: "Practical guidance for sustainable body-composition and lifestyle goals." },
-  { icon: "✦", title: "Health Care", text: "Everyday wellness support built around your personal needs and routines." },
-  { icon: "♡", title: "Skin Care", text: "Simple, consistent approaches to supporting healthier-looking skin." },
-  { icon: "✧", title: "Facial Care", text: "Personalized care habits designed to fit your lifestyle and preferences." },
-  { icon: "⌁", title: "Nutrition Consultation", text: "Understand your nutrition choices and build habits you can actually maintain." },
-];
-
-const heroImages = [
-  { src: "/images/personal-care.jpeg", alt: "Personal Care by TWS" },
-];
-
-const achievementCards = [
-  { title: "A New Chapter", text: "A client story placeholder — from feeling stuck to building a healthier daily routine with consistent guidance." },
-  { title: "Progress That Lasts", text: "A client story placeholder — sustainable progress through realistic goals, accountability, and small changes." },
-  { title: "Confidence From Within", text: "A client story placeholder — improving wellness habits while feeling more confident and energized." },
-];
-
 export default function Home() {
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -34,15 +16,13 @@ export default function Home() {
     const animatedSections = document.querySelectorAll(".reveal");
     animatedSections.forEach((element) => observer.observe(element));
 
-    return () => {
-      observer.disconnect();
-    };
+    return () => observer.disconnect();
   }, []);
 
   return (
     <main>
       <header className="site-header">
-        <a href="#home" className="brand" aria-label="TWS home">
+        <a href="#about" className="brand" aria-label="TWS About Us">
           <img className="brand-logo" src="/images/tws-logo.png" alt="TWS Together We Success logo" />
           <div>
             <strong>TWS</strong>
@@ -50,61 +30,32 @@ export default function Home() {
           </div>
         </a>
         <nav className="nav" aria-label="Main navigation">
-          <a href="#home">Home</a>
           <a href="#about">About Us</a>
           <a href="#programs">Programs</a>
-          <a href="#achievements">Clients Achievements</a>
           <a href="#contact" className="nav-cta">Contact</a>
         </nav>
       </header>
 
-      <section id="home" className="hero">
-        <div className="hero-background" aria-hidden="true">
-          <img
-            src={heroImages[0].src}
-            alt=""
-            className="hero-slide active"
-          />
-          <div className="hero-overlay" />
-        </div>
-        <div className="hero-copy reveal is-visible">
-          <p className="eyebrow">TWS-CERTIFIED HEALTH CONSULTANTS</p>
-          <h1>
-            <span className="hero-hook-line hero-hook-line-one">Healthier habits.</span>
-            <span className="hero-hook-line hero-hook-line-two">Stronger you.</span>
-          </h1>
-          <p className="hero-text">
-            Personalized wellness guidance from Imelda & Kenneth — helping people from different backgrounds, ages, lifestyles, and goals move toward a healthier version of themselves.
-          </p>
-          <div className="hero-actions">
-            <a className="button button-dark" href="#programs">Explore Programs</a>
-            <a className="text-link" href="#about">Meet Imelda & Kenneth →</a>
+      <section id="about" className="about section reveal is-visible">
+        <div className="about-layout">
+          <div className="about-image-wrap">
+            <img src="/images/biography.jpeg" alt="Kenneth Anderson and Imelda Febriantys" />
           </div>
-          <div className="hero-note">
-            <span>●</span> Your goals. Your pace. Your journey.
-          </div>
-        </div>
-      </section>
-
-      <section id="about" className="about section reveal">
-        <div className="about-grid about-grid-full">
-          <div className="section-heading about-copy">
-            <p className="eyebrow">ABOUT US</p>
-            <h2>Two consultants.<br /><em>One shared mission.</em></h2>
-            <div className="about-text">
-              <p>
-                Imelda and Kenneth are TWS-certified health consultants dedicated to helping people make healthier choices in a way that feels realistic, personal, and sustainable.
-              </p>
-              <p>
-                Their clients come from different backgrounds, age groups, lifestyles, and professional environments. Whether the goal is fat loss, better nutrition, personal care, skin care, or simply building healthier daily habits, their approach starts with understanding the individual.
-              </p>
-              <p>
-                Rather than promising overnight results, they focus on practical guidance, consistent support, and habits that can become part of everyday life. The goal is not just to look better, but to feel better and build confidence along the way.
-              </p>
+          <div className="about-details">
+            <div className="section-heading about-heading">
+              <p className="eyebrow">ABOUT US</p>
+              <h2>Two consultants.<br /><em>One shared mission.</em></h2>
             </div>
-          </div>
-          <div className="about-couple-image">
-            <img src="/images/imelda-kenneth.png" alt="Imelda and Kenneth together" />
+            <div className="about-profiles">
+              <article className="about-profile">
+                <h3>Kenneth Anderson</h3>
+                <p>TWS Certified Consultant</p>
+              </article>
+              <article className="about-profile">
+                <h3>Imelda Febriantys</h3>
+                <p>TWS Certified Consultant</p>
+              </article>
+            </div>
           </div>
         </div>
       </section>
@@ -115,41 +66,23 @@ export default function Home() {
           <h2>Programs built around <em>you.</em></h2>
           <p>Choose a starting point, then let&apos;s shape the journey around your goals and lifestyle.</p>
         </div>
-        <div className="programs-content">
-          <a className="programs-image" href="#contact" aria-label="Start your TWS wellness journey">
-            <img src="/images/what-we-offer-bg.jpeg" alt="TWS health and wellness programs" />
+        <div className="programs-gallery">
+          <a className="program-gallery-item" href="#contact" aria-label="Start your TWS Fat Loss journey">
+            <span>Fat Loss</span>
+            <img src="/images/fat-loss.jpeg" alt="TWS Fat Loss" />
+          </a>
+          <a className="program-gallery-item" href="#contact" aria-label="Start your TWS Personal Care journey">
+            <span>Personal Care</span>
+            <img src="/images/personal-care-offer.png" alt="TWS Personal Care" />
+          </a>
+          <a className="program-gallery-item" href="#contact" aria-label="Start your TWS Healthcare journey">
+            <span>Healthcare</span>
+            <img src="/images/healthcare-offer.png" alt="TWS Healthcare" />
           </a>
         </div>
       </section>
 
-      <section className="visual-break reveal">
-        <div className="visual-copy">
-          <p className="eyebrow">NUTRITION &amp; HEALTH SUPPLEMENTS</p>
-          <h2>Wellness is more than a number on a scale.</h2>
-          <p>Support your everyday wellbeing with thoughtful nutrition guidance and health supplements designed to complement your lifestyle, routines, and personal goals.</p>
-        </div>
-        <div className="visual-placeholder"><img src="/images/nutrition-health.jpeg" alt="Nutrition and health supplements by TWS" /></div>
-      </section>
-
-      <section id="achievements" className="achievements section reveal">
-        <div className="section-heading centered">
-          <p className="eyebrow">CLIENTS ACHIEVEMENTS</p>
-          <h2>Every journey has a <span className="story-word">story.</span></h2>
-          <p>Placeholder stories for now — this section can later showcase real client transformations, testimonials, and milestones.</p>
-        </div>
-        <div className="achievement-grid">
-          {achievementCards.map((card, index) => (
-            <article className="achievement-card" key={card.title}>
-              <span>0{index + 1}</span>
-              <h3>{card.title}</h3>
-              <p>{card.text}</p>
-              <div className="achievement-line" />
-            </article>
-          ))}
-        </div>
-      </section>
-
-      <section id="contact" className="contact section reveal">
+<section id="contact" className="contact section reveal">
         <div className="contact-intro">
           <p className="eyebrow">START YOUR JOURNEY</p>
           <h2>Let&apos;s talk about <em>your goal.</em></h2>
