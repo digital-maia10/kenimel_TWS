@@ -2,9 +2,9 @@ import type { Metadata } from "next";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "Imelda & Kenneth | TWS Health Consultants",
+  title: "Imelda & Kenneth | Konsultan Kesehatan TWS",
   description:
-    "Personal health and wellness guidance by TWS-certified consultants Imelda and Kenneth.",
+    "Pendampingan kesehatan dan kebugaran personal oleh konsultan bersertifikat TWS, Imelda dan Kenneth.",
 };
 
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {

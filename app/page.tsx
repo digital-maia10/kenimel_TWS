@@ -22,17 +22,17 @@ export default function Home() {
   return (
     <main>
       <header className="site-header">
-        <a href="#about" className="brand" aria-label="TWS About Us">
+        <a href="#about" className="brand" aria-label="Tentang TWS">
           <img className="brand-logo" src="/images/tws-logo.png" alt="TWS Together We Success logo" />
           <div>
             <strong>TWS</strong>
             <span>TOGETHER WE SUCCESS</span>
           </div>
         </a>
-        <nav className="nav" aria-label="Main navigation">
-          <a href="#about">About Us</a>
-          <a href="#programs">Programs</a>
-          <a href="#contact" className="nav-cta">Contact</a>
+        <nav className="nav" aria-label="Navigasi utama">
+          <a href="#about">Tentang Kami</a>
+          <a href="#programs">Program</a>
+          <a href="#contact" className="nav-cta">Kontak</a>
         </nav>
       </header>
 
@@ -43,17 +43,17 @@ export default function Home() {
           </div>
           <div className="about-details">
             <div className="section-heading about-heading">
-              <p className="eyebrow">ABOUT US</p>
-              <h2>Two consultants.<br /><em>One shared mission.</em></h2>
+              <p className="eyebrow">TENTANG KAMI</p>
+              <h2>Dua konsultan.<br /><em>Satu misi bersama.</em></h2>
             </div>
             <div className="about-profiles">
               <article className="about-profile">
                 <h3>Kenneth Anderson</h3>
-                <p>TWS Certified Consultant</p>
+                <p>Konsultan Bersertifikat TWS</p>
               </article>
               <article className="about-profile">
                 <h3>Imelda Febriantys</h3>
-                <p>TWS Certified Consultant</p>
+                <p>Konsultan Bersertifikat TWS</p>
               </article>
             </div>
           </div>
@@ -62,20 +62,20 @@ export default function Home() {
 
       <section id="programs" className="programs section reveal">
         <div className="section-heading centered">
-          <p className="eyebrow">WHAT WE OFFER</p>
-          <h2>Programs built around <em>you.</em></h2>
-          <p>Choose a starting point, then let&apos;s shape the journey around your goals and lifestyle.</p>
+          <p className="eyebrow">YANG KAMI TAWARKAN</p>
+          <h2>Program yang dirancang untuk <em>Anda.</em></h2>
+          <p>Pilih langkah awal Anda, lalu mari bentuk perjalanan yang sesuai dengan tujuan dan gaya hidup Anda.</p>
         </div>
         <div className="programs-gallery">
-          <a className="program-gallery-item" href="#contact" aria-label="Start your TWS Fat Loss journey">
+          <a className="program-gallery-item" href="#contact" aria-label="Mulai perjalanan Fat Loss TWS Anda">
             <span>Fat Loss</span>
             <img src="/images/fat-loss.jpeg" alt="TWS Fat Loss" />
           </a>
-          <a className="program-gallery-item" href="#contact" aria-label="Start your TWS Personal Care journey">
+          <a className="program-gallery-item" href="#contact" aria-label="Mulai perjalanan Personal Care TWS Anda">
             <span>Personal Care</span>
             <img src="/images/personal-care-offer.png" alt="TWS Personal Care" />
           </a>
-          <a className="program-gallery-item" href="#contact" aria-label="Start your TWS Healthcare journey">
+          <a className="program-gallery-item" href="#contact" aria-label="Mulai perjalanan Healthcare TWS Anda">
             <span>Healthcare</span>
             <img src="/images/healthcare-offer.png" alt="TWS Healthcare" />
           </a>
@@ -84,14 +84,14 @@ export default function Home() {
 
 <section id="contact" className="contact section reveal">
         <div className="contact-intro">
-          <p className="eyebrow">START YOUR JOURNEY</p>
-          <h2>Let&apos;s talk about <em>your goal.</em></h2>
-          <p>Have a question or want to understand which program may suit you? Reach out directly to Imelda or Kenneth.</p>
+          <p className="eyebrow">MULAI PERJALANAN ANDA</p>
+          <h2>Mari bicara tentang <em>tujuan Anda.</em></h2>
+          <p>Punya pertanyaan atau ingin mengetahui program mana yang paling sesuai untuk Anda? Hubungi Imelda atau Kenneth secara langsung.</p>
           <div className="contact-message">
             <p>
-              Imelda and Kenneth are TWS-certified consultants who believe that wellness should feel personal, practical, and achievable. They work with clients from different backgrounds, business profiles, age groups, and body-goal objectives, offering education, encouragement, and consistent support along the way.
+              Imelda dan Kenneth adalah konsultan bersertifikat TWS yang percaya bahwa kesehatan seharusnya terasa personal, praktis, dan dapat dicapai. Mereka mendampingi klien dari berbagai latar belakang, profil bisnis, kelompok usia, serta tujuan tubuh, dengan memberikan edukasi, semangat, dan dukungan yang konsisten di setiap langkah.
             </p>
-            <p className="quote">“Progress becomes more meaningful when you don’t have to make the journey alone.”</p>
+            <p className="quote">“Perkembangan terasa lebih bermakna saat Anda tidak harus menjalani perjalanan ini sendirian.”</p>
           </div>
         </div>
 
@@ -100,7 +100,7 @@ export default function Home() {
             <img src="/images/kenneth-portrait.png" alt="Kenneth Anderson" />
             <div className="contact-profile-info">
               <h3>Kenneth Anderson</h3>
-              <p>Specializes in personal care, fat-loss and nutritional consultation.</p>
+              <p>Berfokus pada personal care, fat-loss, dan konsultasi nutrisi.</p>
             </div>
             <div className="social-links">
               <a href="https://www.instagram.com/ken.anderss/" target="_blank" rel="noreferrer" aria-label="Kenneth Instagram" title="Kenneth Instagram">
@@ -116,7 +116,7 @@ export default function Home() {
             <img src="/images/imelda-portrait.png" alt="Imelda Febriantys" />
             <div className="contact-profile-info">
               <h3>Imelda Febriantys</h3>
-              <p>Specializes in facial care, fat-loss and skin care.</p>
+              <p>Berfokus pada facial care, fat-loss, dan skin care.</p>
             </div>
             <div className="social-links">
               <a href="https://www.instagram.com/imeldafebriantys/" target="_blank" rel="noreferrer" aria-label="Imelda Instagram" title="Imelda Instagram">
@@ -132,7 +132,7 @@ export default function Home() {
 
       <footer className="footer">
         <div className="footer-brand"><img className="brand-logo small" src="/images/tws-logo.png" alt="TWS Together We Success logo" /><div><strong>TWS</strong><span>TOGETHER WE SUCCESS</span></div></div>
-        <p>© {new Date().getFullYear()} TWS Health Consultants. All rights reserved.</p>
+        <p>© {new Date().getFullYear()} Konsultan Kesehatan TWS. Seluruh hak cipta dilindungi.</p>
       </footer>
     </main>
   );
