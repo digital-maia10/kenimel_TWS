@@ -2,6 +2,9 @@
 
 import { useEffect } from "react";
 
+const basePath = process.env.NEXT_PUBLIC_BASE_PATH || "";
+const imagePath = (path: string) => `${basePath}${path}`;
+
 export default function Home() {
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -23,7 +26,7 @@ export default function Home() {
     <main>
       <header className="site-header">
         <a href="#about" className="brand" aria-label="Tentang TWS">
-          <img className="brand-logo" src="/images/tws-logo.png" alt="TWS Together We Success logo" />
+          <img className="brand-logo" src={imagePath("/images/tws-logo.png")} alt="TWS Together We Success logo" />
           <div>
             <strong>TWS</strong>
             <span>TOGETHER WE SUCCESS</span>
@@ -39,7 +42,7 @@ export default function Home() {
       <section id="about" className="about section reveal is-visible">
         <div className="about-layout">
           <div className="about-image-wrap">
-            <img src="/images/biography.jpeg" alt="Kenneth Anderson and Imelda Febriantys" />
+            <img src={imagePath("/images/biography.jpeg")} alt="Kenneth Anderson and Imelda Febriantys" />
           </div>
           <div className="about-details">
             <div className="section-heading about-heading">
@@ -69,15 +72,15 @@ export default function Home() {
         <div className="programs-gallery">
           <a className="program-gallery-item" href="#contact" aria-label="Mulai perjalanan Fat Loss TWS Anda">
             <span>Fat Loss</span>
-            <img src="/images/fat-loss.jpeg" alt="TWS Fat Loss" />
+            <img src={imagePath("/images/fat-loss.jpeg")} alt="TWS Fat Loss" />
           </a>
           <a className="program-gallery-item" href="#contact" aria-label="Mulai perjalanan Personal Care TWS Anda">
             <span>Personal Care</span>
-            <img src="/images/personal-care-offer.png" alt="TWS Personal Care" />
+            <img src={imagePath("/images/personal-care-offer.png")} alt="TWS Personal Care" />
           </a>
           <a className="program-gallery-item" href="#contact" aria-label="Mulai perjalanan Healthcare TWS Anda">
             <span>Healthcare</span>
-            <img src="/images/healthcare-offer.png" alt="TWS Healthcare" />
+            <img src={imagePath("/images/healthcare-offer.png")} alt="TWS Healthcare" />
           </a>
         </div>
       </section>
@@ -97,7 +100,7 @@ export default function Home() {
 
         <div className="contact-profiles">
           <article className="contact-profile">
-            <img src="/images/kenneth-portrait.png" alt="Kenneth Anderson" />
+            <img src={imagePath("/images/kenneth-portrait.png")} alt="Kenneth Anderson" />
             <div className="contact-profile-info">
               <h3>Kenneth Anderson</h3>
               <p>Berfokus pada personal care, fat-loss, dan konsultasi nutrisi.</p>
@@ -113,7 +116,7 @@ export default function Home() {
           </article>
 
           <article className="contact-profile">
-            <img src="/images/imelda-portrait.png" alt="Imelda Febriantys" />
+            <img src={imagePath("/images/imelda-portrait.png")} alt="Imelda Febriantys" />
             <div className="contact-profile-info">
               <h3>Imelda Febriantys</h3>
               <p>Berfokus pada facial care, fat-loss, dan skin care.</p>
@@ -131,7 +134,7 @@ export default function Home() {
       </section>
 
       <footer className="footer">
-        <div className="footer-brand"><img className="brand-logo small" src="/images/tws-logo.png" alt="TWS Together We Success logo" /><div><strong>TWS</strong><span>TOGETHER WE SUCCESS</span></div></div>
+        <div className="footer-brand"><img className="brand-logo small" src={imagePath("/images/tws-logo.png")} alt="TWS Together We Success logo" /><div><strong>TWS</strong><span>TOGETHER WE SUCCESS</span></div></div>
         <p>© {new Date().getFullYear()} Konsultan Kesehatan TWS. Seluruh hak cipta dilindungi.</p>
       </footer>
     </main>
